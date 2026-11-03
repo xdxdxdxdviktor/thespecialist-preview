@@ -1,0 +1,19 @@
+{
+  "name": "The Specialist",
+  "short_name": "The Specialist",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#143c30",
+  "background_color": "#f7f6f1",
+  "display": "browser"
+}
