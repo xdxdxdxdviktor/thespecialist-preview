@@ -647,3 +647,6 @@ h1 em,h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:#6f
   .projects-grid{grid-template-columns:1fr}
   .project-card{min-height:0}
 }
+
+/* statický náhled – označení ukázky formuláře */
+.preview-note{margin:0 0 14px;padding:10px 12px;border:1px dashed #b28a36;border-radius:4px;background:#fbf4e3;color:#5a4314;font-size:14px;line-height:1.45}

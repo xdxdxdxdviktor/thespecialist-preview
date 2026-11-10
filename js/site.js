@@ -228,6 +228,22 @@
     var summary = form.querySelector('.form-summary');
     var submit = form.querySelector('[type=submit]');
     var submitHtml = submit.innerHTML;
+    // Statický náhled (GitHub Pages): formulář nic neodesílá – jasně to označíme
+    if (window.TS_PREVIEW) {
+      var PV = {
+        cs: 'Ukázka: v testovacím náhledu se poptávka nikam neodesílá ani neukládá.',
+        en: 'Demo: in this test preview the enquiry is not sent or stored.',
+        ru: 'Демонстрация: в тестовой версии запрос никуда не отправляется и не сохраняется.',
+        uk: 'Демонстрація: у тестовій версії запит нікуди не надсилається і не зберігається.'
+      };
+      var pvText = PV[(document.documentElement.lang || 'cs').slice(0, 2)] || PV.cs;
+      [form, success].forEach(function (el, i) {
+        var n = document.createElement('p');
+        n.className = 'preview-note';
+        n.textContent = pvText;
+        if (i === 0) submit.parentNode.insertBefore(n, submit); else el.insertBefore(n, el.children[1] || null);
+      });
+    }
     var started = false;
     var renderedAt = Date.now();
     var location_ = form.getAttribute('data-location');
