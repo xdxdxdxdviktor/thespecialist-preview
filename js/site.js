@@ -278,7 +278,7 @@
       switch (name) {
         case 'service': if (!v) msg = ERR.service; break;
         case 'name': if (v.length < 2) msg = ERR.name; break;
-        case 'phone': if (!v) msg = ERR.required; else if (!phoneOk(v)) msg = ERR.phone; break;
+        case 'phone': if (!v) msg = el.required ? ERR.required : ''; else if (!phoneOk(v)) msg = ERR.phone; break;
         case 'email': if (!v) msg = ERR.required; else if (!EMAIL_RE.test(v)) msg = ERR.email; break;
         case 'message': if (v.length < 10) msg = ERR.message; break;
         case 'consent': if (!v) msg = (I18N.form && I18N.form.consentRequired) || ERR.required; break;
