@@ -676,3 +676,5 @@ h1 em,h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:#6f
 .qc-opt:has(input:checked){border-color:var(--green);background:#eef3ea}
 .qc-opt input{accent-color:var(--green)}
 @media (max-width:760px){.paths-grid{grid-template-columns:1fr}.path-card{padding:20px}}
+/* úzké telefony (≤ 380 px): delší RU/UA „Консультация“ se vejde do tlačítka */
+@media (max-width:380px){.sticky-contact{gap:5px;padding-left:8px;padding-right:8px}.sticky-contact a{font-size:13.5px;gap:4px;padding:0 4px}.sticky-contact .sticky-primary svg{display:none}}
